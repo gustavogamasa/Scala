@@ -43,3 +43,25 @@ def main(args: Array[String]){
 } // main
 
 } //object Stuff
+
+object Loops {
+
+  //expression
+  (99 to 9999).foreach(_ => println("Something"))
+
+  //transform a list
+  List(1,2,3).map( x => x + 1) // +1 every element in the list
+  List(1,2,3).flatMap(n => Seq.fill(n)(1)) //// replace with (1,1,1)
+  List(1,2,3).filter(n => n %42 == 0)
+  //fold, find, count, maxBy, sum, reduce
+  
+  List(1,2,3).foreach { x => println(x) }
+
+  for {
+    x <- List(1,2,3)
+    y <- List(1,2,3)
+  }yield (x,y)
+  
+  List(1,2,3).flatMap(x => List(4,5,6).map(y => (x, y))
+
+}
